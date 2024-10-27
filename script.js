@@ -2,64 +2,81 @@
 'use strict';
 
 // Problem one
-const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
-function minMaxValue(array) {
-  let minValue = 0;
-  let maxValue = 0;
+// function minMaxValue(array) {
+//   let minValue = 0;
+//   let maxValue = 0;
 
+//   for (let i = 0; i < array.length; i++) {
+//     if (isNaN(array[i])) continue;
+//     if (array[i] < minValue) {
+//       minValue = array[i];
+//     }
+//     if (array[i] > maxValue) {
+//       maxValue = array[i];
+//     }
+//   }
+//   return maxValue - minValue;
+// }
+
+// // const test = minMaxValue(temperatures);
+// // console.log(test);
+
+// // Problem 2
+
+// const temperatures2 = [3, -222, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const temperatures3 = [3, 45, -6, -1, 'error', 9, 13, -17, 15, 14, 9, 5];
+
+// function multipleMinMaxApliputde(array1, array2) {
+//   let array1Amplitude = minMaxValue(array1);
+//   let array2Amplitude = minMaxValue(array2);
+//   return [array1Amplitude, array2Amplitude];
+// }
+
+// let multipleMinMaxApliputudeResult = multipleMinMaxApliputde(
+//   temperatures2,
+//   temperatures3
+// );
+// console.log(
+//   multipleMinMaxApliputudeResult[0],
+//   multipleMinMaxApliputudeResult[1]
+// );
+
+// // Problem 3 łączenie tablic/list
+
+// function minMaxValueNew(array1, array2) {
+//   let arrayCombine = array1.concat(array2);
+//   let minValue = 0;
+//   let maxValue = 0;
+
+//   for (let i = 0; i < arrayCombine.length; i++) {
+//     if (isNaN(arrayCombine[i])) continue;
+//     debugger;
+//     if (arrayCombine[i] < minValue) {
+//       minValue = arrayCombine[i];
+//     }
+//     if (arrayCombine[i] > maxValue) {
+//       maxValue = arrayCombine[i];
+//     }
+//   }
+//   return maxValue - minValue;
+// }
+
+// console.log(minMaxValueNew(temperatures2, temperatures3));
+
+// End Challenge
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+function challengeFunction(array) {
+  let result = '';
   for (let i = 0; i < array.length; i++) {
-    if (isNaN(array[i])) continue;
-    if (array[i] < minValue) {
-      minValue = array[i];
-    }
-    if (array[i] > maxValue) {
-      maxValue = array[i];
-    }
+    result += `... ${array[i]} oC in ${i + 1} days `;
   }
-  return maxValue - minValue;
+  console.log(result);
 }
 
-// const test = minMaxValue(temperatures);
-// console.log(test);
-
-// Problem 2
-
-const temperatures2 = [3, -222, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
-const temperatures3 = [3, 45, -6, -1, 'error', 9, 13, -17, 15, 14, 9, 5];
-
-function multipleMinMaxApliputde(array1, array2) {
-  let array1Amplitude = minMaxValue(array1);
-  let array2Amplitude = minMaxValue(array2);
-  return [array1Amplitude, array2Amplitude];
-}
-
-let multipleMinMaxApliputudeResult = multipleMinMaxApliputde(
-  temperatures2,
-  temperatures3
-);
-console.log(
-  multipleMinMaxApliputudeResult[0],
-  multipleMinMaxApliputudeResult[1]
-);
-
-// Problem 3 łączenie tablic/list
-
-function minMaxValueNew(array1, array2) {
-  let arrayCombine = array1.concat(array2);
-  let minValue = 0;
-  let maxValue = 0;
-
-  for (let i = 0; i < arrayCombine.length; i++) {
-    if (isNaN(arrayCombine[i])) continue;
-    if (arrayCombine[i] < minValue) {
-      minValue = arrayCombine[i];
-    }
-    if (arrayCombine[i] > maxValue) {
-      maxValue = arrayCombine[i];
-    }
-  }
-  return maxValue - minValue;
-}
-
-console.log(minMaxValueNew(temperatures2, temperatures3));
+challengeFunction(data1);
+challengeFunction(data2);
